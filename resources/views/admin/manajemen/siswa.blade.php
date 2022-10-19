@@ -45,19 +45,21 @@
                                         <th>NIS</th>
                                         <th>Nama</th>
                                         <th>Kelas</th>
-                                        <th>Nama Ibu Kandung</th>
+                                        <th>Alamat</th>
+                                        <th>No Telp</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>1</td>
+                                        <td>2021118644</td>
+                                        <td>Fauzan Subagja</td>
+                                        <td>XII RPL 1</td>
+                                        <td>Jl. Bojongloa No.53/93</td>
+                                        <td>085798001868</td>
+                                        <td>Aktif</td>
                                         <td>
                                             <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                             <a href="" class="btn btn-secondary"><i class="fas fa-eye"></i></a>

@@ -52,8 +52,8 @@
                                         <td>
                                             <a href="" class="btn btn-secondary" data-toggle="tooltip" title="Lihat"><i
                                                     class="fas fa-eye"></i></a>
-                                            <a href="" class="btn btn-warning" data-toggle="tooltip" title="Lihat"><i
-                                                    class="fas fa-undo"></i></i></a>
+                                            <a href="" class="btn btn-warning" data-toggle="tooltip"
+                                                title="Ubah Password"><i class="fas fa-undo"></i></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
