@@ -8,9 +8,10 @@
 <script src="{{ asset('app/js/chart.morris.js') }}"></script>
 <script src="{{ asset('app/js/script.js') }}"></script>
 <script src="{{ asset('https://cdn.jsdelivr.net/npm/apexcharts') }}"></script>
+<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js') }}"></script>
 
 <script>
-    var options = {
+  var options = {
         series: [{
         name: 'Kelas X',
         data: [44, 55, 57, 56, 61, 58, 63, 60, 66]

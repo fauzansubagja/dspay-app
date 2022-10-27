@@ -29,9 +29,9 @@ Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
 Route::get('/admin/user', [UserController::class, 'index']);
 Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/login', function () {
+    return view('login');
+});
 // Route::get('/user', function () {
 //     return view('admin.user');
 // });
