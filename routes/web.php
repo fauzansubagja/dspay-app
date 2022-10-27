@@ -39,6 +39,9 @@ Route::get('/kalender', function () {
 Route::get('/keuangan', function () {
     return view('admin.laporan.keuangan');
 });
+Route::get('/profile', function () {
+    return view('admin.profile');
+});
 // Route::get('/user', function () {
 //     return view('admin.user');
 // });
