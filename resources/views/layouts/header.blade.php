@@ -9,5 +9,7 @@
 	<link rel="stylesheet" href="{{ asset('../app/css/feathericon.min.css') }}">
 	<link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
 	<link rel="stylesheet" href="{{ asset('../app/plugins/morris/morris.css') }}">
+	<link rel="stylesheet" href="{{ asset('../app/css/bootstrap-datetimepicker.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('../app/plugins/fullcalendar/fullcalendar.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('../app/css/style.css') }}">
 </head>

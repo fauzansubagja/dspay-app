@@ -24,8 +24,8 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-book"></i> <span> Laporan </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href=""><span> Laporan Keuangan </span></a></li>
-                        <li><a href="/rekapitulasi"><span> Rekapitulasi </span></a></li>
+                        <li><a href="/admin/laporan/keuangan"><span> Laporan Keuangan </span></a></li>
+                        <li><a href="/admin/laporan/rekapitulasi"><span> Rekapitulasi </span></a></li>
                     </ul>
                 </li>
                 <li class=""> <a href="/admin/user"><i class="fas fa-users-cog"></i> <span> Manajemen Pengguna

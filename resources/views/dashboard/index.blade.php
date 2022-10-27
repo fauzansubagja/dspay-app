@@ -90,7 +90,7 @@
                         <h4 class="card-title">Rekap Pendapatan</h4>
                     </div>
                     <div class="card-body">
-                        <div id="donut-chart"></div>
+                        <div id="chart1"></div>
                     </div>
                 </div>
             </div>

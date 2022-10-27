@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KelulusanController;
 use App\Http\Controllers\KenaikanController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RekapitulasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,12 @@ Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index
 
 Route::get('/login', function () {
     return view('login');
+});
+Route::get('/kalender', function () {
+    return view('admin.kalender');
+});
+Route::get('/keuangan', function () {
+    return view('admin.laporan.keuangan');
 });
 // Route::get('/user', function () {
 //     return view('admin.user');
@@ -56,5 +63,3 @@ Route::get('/login', function () {
 
 // belum dikerjakan
 // setting
-// laporan keuangan
-// kalender
