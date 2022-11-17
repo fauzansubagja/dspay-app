@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\ManajemenController;
@@ -20,6 +21,10 @@ use App\Http\Controllers\RekapitulasiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'auth']);
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
 Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
@@ -30,9 +35,6 @@ Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
 Route::get('/admin/user', [UserController::class, 'index']);
 Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index']);
 
-Route::get('/login', function () {
-    return view('login');
-});
 Route::get('/kalender', function () {
     return view('admin.kalender');
 });
