@@ -17,7 +17,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><a href="add-booking.html" class="btn btn-primary veiwbutton "><i
+                        <h4 class="card-title"><a href="/management/kelas/create" class="btn btn-primary veiwbutton "><i
                                     class="fas fa-plus"></i> Tambah</a>
                             <form action="" class="form-horizontal float-right" method="get" accept-charset="utf-8">
                                 <div class="input-group input-group" style="width: 260px;">

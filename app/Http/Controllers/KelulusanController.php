@@ -8,6 +8,6 @@ class KelulusanController extends Controller
 {
     public function index()
     {
-        return view('admin.manajemen.kelulusan');
+        return view('admin.manajemen.kelulusan.index');
     }
 }

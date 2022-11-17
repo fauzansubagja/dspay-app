@@ -22,9 +22,9 @@
                                     src="{{ asset('../app/img/profile-img.jpg') }}"> </a>
                         </div>
                         <div class="col ml-md-n2 profile-user-info">
-                            <h4 class="user-name mb-3">David Alvarez</h4>
+                            <h4 class="user-name mb-3">David</h4>
                             <h6 class="text-muted mt-1">Manager</h6>
-                            <div class="user-Location mt-1"><i class="fas fa-map-marker-alt"></i> Florida, United States
+                            <div class="user-Location mt-1"><i class="fas fa-map-marker-alt"></i> Bandung, Indonesia
                             </div>
                             <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -57,7 +57,7 @@
                                         </h5>
                                         <div class="row mt-5">
                                             <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Name</p>
-                                            <p class="col-sm-9">David Alvarez</p>
+                                            <p class="col-sm-9">David</p>
                                         </div>
                                         <div class="row">
                                             <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Date of Birth</p>

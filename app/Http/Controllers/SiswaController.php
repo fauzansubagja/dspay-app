@@ -8,6 +8,6 @@ class SiswaController extends Controller
 {
     public function index()
     {
-        return view('admin.manajemen.siswa');
+        return view('admin.manajemen.siswa.index');
     }
 }

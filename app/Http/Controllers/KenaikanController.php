@@ -8,6 +8,6 @@ class KenaikanController extends Controller
 {
     public function index()
     {
-        return view('admin.manajemen.kenaikan');
+        return view('admin.manajemen.kenaikan.index');
     }
 }
