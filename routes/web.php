@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\ManajemenController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
@@ -30,9 +31,14 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
+
+// TAHUN AJARAN
+Route::resource('/management/periode', PeriodeController::class)->middleware('auth');
+
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
-Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
+// Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
 Route::resource('/management/kelas', KelasController::class);
 Route::get('/management/siswa', [SiswaController::class, 'index']);
 Route::get('/management/kelulusan', [KelulusanController::class, 'index']);

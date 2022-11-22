@@ -12,7 +12,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Manajemen Data </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="/management/tahunajaran">Tahun Ajaran </a></li>
+                        <li><a href="/management/periode">Tahun Ajaran </a></li>
                         <li><a href="/management/kelas"> Kelas </a></li>
                         <li><a href="/management/siswa"> Siswa </a></li>
                         <li><a href="/management/kelulusan"> Kelulusan </a></li>
@@ -32,8 +32,11 @@
                         </span></a>
                 <li> <a href=""><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
                 <li class="list-divider"></li>
-                <li class=""> <a href=""><i class="fas fa-sign-out-alt"></i> <span> Logout </span></a>
+                @auth
+                <li class=""> <a href="/logout" method="post"><i class="fas fa-sign-out-alt"></i> <span> Logout
+                        </span></a>
                 </li>
+                @endauth
             </ul>
         </div>
     </div>
