@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('periode', function (Blueprint $table) {
-            $table->increments('periode_id');
+            $table->id('periode_id');
             $table->year('start');
             $table->year('end');
             $table->string('status');

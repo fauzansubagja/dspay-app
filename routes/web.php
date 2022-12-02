@@ -40,7 +40,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
 // Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
 Route::resource('/management/kelas', KelasController::class);
-Route::get('/management/siswa', [SiswaController::class, 'index']);
+Route::resource('management/siswa', SiswaController::class);
 Route::get('/management/kelulusan', [KelulusanController::class, 'index']);
 Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
 Route::get('/admin/user', [UserController::class, 'index']);

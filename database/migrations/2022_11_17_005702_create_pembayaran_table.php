@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pembayaran', function (Blueprint $table) {
-            $table->increments('pembayaran_id');
+            $table->id('pembayaran_id');
             $table->enum('pembayaran_tipe', ['bebas', 'bulan']);
             $table->timestamps();
         });

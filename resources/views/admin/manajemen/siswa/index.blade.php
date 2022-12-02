@@ -52,21 +52,31 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($siswas as $siswa)
                                     <tr>
-                                        <td>1</td>
-                                        <td>2021118644</td>
-                                        <td>Fauzan Subagja</td>
-                                        <td>XII RPL 1</td>
-                                        <td>Jl. Bojongloa No.53/93</td>
-                                        <td>085798001868</td>
-                                        <td>Aktif</td>
+                                        <td>{{ $i }}</td>
+                                        <td>{{ $siswa->nisn }}</td>
+                                        <td>{{ $siswa->nama_siswa }}</td>
+                                        <td>{{ $siswa->kelas  }} {{ $siswa->jurusan }}</td>
+                                        <td>{{ $siswa->alamat }}</td>
+                                        <td>{{ $siswa->no_telp }}</td>
+                                        <td>{{ $siswa->status }}</td>
                                         <td>
                                             <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                             <a href="" class="btn btn-secondary"><i class="fas fa-eye"></i></a>
-                                            <button type="button" class="btn btn-danger"><i
-                                                    class="fas fa-trash-alt"></i></button>
+                                            <form action="{{ url('management/siswa', $siswa->id_siswa) }}" method="post" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger"><i
+                                                        class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </form>
                                         </td>
+                                        @php
+                                            $i++
+                                        @endphp
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
