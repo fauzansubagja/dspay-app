@@ -13,6 +13,7 @@ use App\Http\Controllers\KenaikanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RekapitulasiController;
 use App\Http\Controllers\KeuanganController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,7 +48,8 @@ Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
 Route::get('/admin/laporan/keuangan', [KeuanganController::class, 'index']);
 Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index']);
 Route::get('/management/user', [UserController::class, 'index']);
+Route::resource('/management/profile', ProfileController::class);
 
-Route::get('/kelas', function () {
-    return view('admin.manajemen.kelas');
+Route::get('/edit-profile', function () {
+    return view('admin.profile.edit');
 });

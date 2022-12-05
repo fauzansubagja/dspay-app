@@ -94,9 +94,8 @@
                         <h6>Fauzan Subagja</h6>
                         <p class="text-muted mb-0">Administrator</p>
                     </div>
-                </div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item"
-                    href="settings.html">Account Settings</a> <a class="dropdown-item" href="/logout"
-                    method="POST">Logout</a>
+                </div> <a class="dropdown-item" href="/management/profile">My Profile</a> <a class="dropdown-item"
+                    href="/logout" method="POST">Logout</a>
             </div>
             @endauth
         </li>

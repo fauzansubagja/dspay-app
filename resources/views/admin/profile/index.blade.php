@@ -29,9 +29,7 @@
                             <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                         </div>
-                        <div class="col-auto profile-btn"> <a href="" class="btn btn-primary">
-                                Message
-                            </a> <a href="edit-profile.html" class="btn btn-primary">
+                        <div class="col-auto profile-btn"> <a href="/menagement/profile/create" class="btn btn-primary">
                                 Edit
                             </a> </div>
                     </div>
