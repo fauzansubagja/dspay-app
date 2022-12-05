@@ -17,8 +17,9 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><a href="/management/kelas/create" class="btn btn-primary veiwbutton "><i
-                                    class="fas fa-plus"></i> Tambah</a>
+                        <h4 class="card-title"><button class="open-button btn btn-primary veiwbutton"
+                                onclick="openForm()"><i class="fas fa-plus"></i>
+                                Tambah</button>
                             <form action="" class="form-horizontal float-right" method="get" accept-charset="utf-8">
                                 <div class="input-group input-group" style="width: 260px;">
                                     <input type="text" id="field" autofocus name="n" placeholder="Nama Kelas"

@@ -17,7 +17,7 @@
             <div class="col-xl-9 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        <h4 class="card-title">Tambah Kelas</h4>
+                        <h4 class="card-title">Edit Kelas</h4>
                     </div>
                     <div class="card-body">
                         <form action="#">

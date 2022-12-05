@@ -5,7 +5,7 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12 mt-5">
-                    <h3 class="page-title mt-3">Tahun Ajaran</h3>
+                    <h3 class="page-title mt-3">Tambah Tahun Ajaran</h3>
                     <ul class="breadcrumb">
                         {{-- <li class="breadcrumb-item active">List</li> --}}
                     </ul>
@@ -16,7 +16,7 @@
             <div class="col-xl-9 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        <h4 class="card-title">Tambah Tahun Ajaran</h4>
+                        <h4 class="card-title">Edit Tahun Ajaran</h4>
                     </div>
                     <div class="card-body">
                         <form action="#">

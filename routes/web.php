@@ -32,19 +32,19 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 
-// TAHUN AJARAN
-Route::resource('/management/periode', PeriodeController::class)->middleware('auth');
+// // TAHUN AJARAN
+// // Route::resource('/management/periode', PeriodeController::class)->middleware('auth');
 
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
-// Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
-Route::resource('/management/kelas', KelasController::class);
-Route::resource('management/siswa', SiswaController::class);
-Route::get('/management/kelulusan', [KelulusanController::class, 'index']);
-Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
-Route::get('/admin/user', [UserController::class, 'index']);
-Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index']);
+// Route::get('/dashboard', [DashboardController::class, 'index']);
+// Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
+// // Route::get('/management/tahunajaran', [ManajemenController::class, 'index']);
+// Route::resource('/management/kelas', KelasController::class);
+// Route::resource('management/siswa', SiswaController::class);
+// Route::get('/management/kelulusan', [KelulusanController::class, 'index']);
+// Route::get('/management/kenaikan', [KenaikanController::class, 'index']);
+// Route::get('/admin/user', [UserController::class, 'index']);
+// Route::get('/admin/laporan/rekapitulasi', [RekapitulasiController::class, 'index']);
 
 Route::get('/kalender', function () {
     return view('admin.kalender');
@@ -55,12 +55,34 @@ Route::get('/keuangan', function () {
 Route::get('/profile', function () {
     return view('admin.profile');
 });
-// Route::get('/user', function () {
-//     return view('admin.user');
-// });
-// Route::get('/tahunajaran', function () {
-//     return view('admin.manajemen.tahunajaran');
-// });
+
+// mulai
+Route::get('/add-periode', function () {
+    return view('admin.manajemen.tahunajaran.create');
+});
+Route::get('/periode', function () {
+    return view('admin.manajemen.tahunajaran.index');
+});
+
+Route::get('/kelas', function () {
+    return view('admin.manajemen.kelas.index');
+});
+Route::get('/add-kelas', function () {
+    return view('admin.manajemen.kelas.create');
+});
+Route::get('/siswa', function () {
+    return view('admin.manajemen.siswa.index');
+});
+Route::get('/add-siswa', function () {
+    return view('admin.manajemen.siswa.create');
+});
+Route::get('/detail-siswa', function () {
+    return view('admin.manajemen.siswa.detail');
+});
+
+Route::get('/pembayaran', function () {
+    return view('admin.pembayaran');
+});
 // Route::get('/kelas', function () {
 //     return view('admin.manajemen.kelas');
 // });
