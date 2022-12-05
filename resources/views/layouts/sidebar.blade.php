@@ -28,7 +28,7 @@
                         <li><a href="/admin/laporan/rekapitulasi"><span> Rekapitulasi </span></a></li>
                     </ul>
                 </li>
-                <li class=""> <a href="/admin/user"><i class="fas fa-users-cog"></i> <span> Manajemen Pengguna
+                <li class=""> <a href="/management/user"><i class="fas fa-users-cog"></i> <span> Manajemen Pengguna
                         </span></a>
                 <li> <a href=""><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
                 <li class="list-divider"></li>

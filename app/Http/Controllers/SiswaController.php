@@ -35,7 +35,7 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.manajemen.siswa.create');
     }
 
     /**
@@ -54,7 +54,6 @@ class SiswaController extends Controller
         }
         Siswa::create($input);
         return back()->with('success', 'Sukses Menambah Siswa!');
-
     }
 
     /**
@@ -65,7 +64,7 @@ class SiswaController extends Controller
      */
     public function show(Siswa $siswa)
     {
-        //
+        return view('admin.manajemen.siswa.detail');
     }
 
     /**
@@ -76,7 +75,7 @@ class SiswaController extends Controller
      */
     public function edit(Siswa $siswa)
     {
-        //
+        return view('admin.manajemen.siswa.edit');
     }
 
     /**
@@ -91,7 +90,7 @@ class SiswaController extends Controller
         $request->validate($this->rules);
 
         $input = $request->all();
-        
+
         if ($request->hasFile('foto_siswa')) {
             if ($request->old_product_image) {
                 Storage::delete($request->old_product_image);

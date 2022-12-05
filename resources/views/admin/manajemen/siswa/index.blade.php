@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">
-                            <a href="add-booking.html" class="btn btn-primary"><i class="fas fa-plus"></i>
+                            <a href="/management/siswa/create" class="btn btn-primary"><i class="fas fa-plus"></i>
                                 Tambah</a>
                             <a href="add-booking.html" class="btn btn-danger"><i class="fas fa-upload"></i>
                                 Upload Siswa</a>
@@ -57,14 +57,15 @@
                                         <td>{{ $i }}</td>
                                         <td>{{ $siswa->nisn }}</td>
                                         <td>{{ $siswa->nama_siswa }}</td>
-                                        <td>{{ $siswa->kelas  }} {{ $siswa->jurusan }}</td>
+                                        <td>{{ $siswa->kelas }} {{ $siswa->jurusan }}</td>
                                         <td>{{ $siswa->alamat }}</td>
                                         <td>{{ $siswa->no_telp }}</td>
                                         <td>{{ $siswa->status }}</td>
                                         <td>
                                             <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                             <a href="" class="btn btn-secondary"><i class="fas fa-eye"></i></a>
-                                            <form action="{{ url('management/siswa', $siswa->id_siswa) }}" method="post" class="d-inline">
+                                            <form action="{{ url('management/siswa', $siswa->id_siswa) }}" method="post"
+                                                class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger"><i
@@ -73,7 +74,7 @@
                                             </form>
                                         </td>
                                         @php
-                                            $i++
+                                        $i++
                                         @endphp
                                     </tr>
                                     @endforeach
