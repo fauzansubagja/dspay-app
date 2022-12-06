@@ -6,6 +6,7 @@
             <div class="row">
                 <div class="col-sm-12 mt-5">
                     <h3 class="page-title mt-3">Kelas</h3>
+                    @include('layouts/_flash')
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item active">List</li>
                     </ul>
@@ -17,7 +18,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><a href="/management/kelas/create"
+                        <h4 class="card-title"><a href="{{ route('kelas.create') }}"
                                 class="open-button btn btn-primary veiwbutton" onclick="openForm()"><i
                                     class="fas fa-plus"></i>
                                 Tambah</a>
@@ -45,16 +46,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $no = 1; @endphp
+                                    @foreach ($kelas as $data)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $data->nama_kelas}}</td>
+                                        <td>{{ $data->id_kelas}}</td>
                                         <td>
-                                            <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                                            <button type="button" class="btn btn-danger"><i
-                                                    class="fas fa-trash-alt"></i></button>
+                                            <form action="{{ route('kelas.destroy', $data->id) }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <a href="{{ route('kelas.edit', $data->id) }}"
+                                                    class="btn btn-warning"><i class="fas fa-edit"></i>
+                                                </a>
+                                                <button type="submit" class="btn btn-sm btn-outline-danger"
+                                                    onclick="return confirm('Apakah Anda Yakin?')">Delete
+                                                </button>
+                                                {{-- <button type="button" class="btn btn-danger"
+                                                    onclick="return confirm('Apakah Anda Yakin?')"><i
+                                                        class=" fas fa-trash-alt"></i></button> --}}
+                                            </form>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

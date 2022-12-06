@@ -14,7 +14,8 @@ class KelasController extends Controller
      */
     public function index()
     {
-        return view('admin.manajemen.kelas.index');
+        $kelas = Kelas::all();
+        return view('admin.manajemen.kelas.index', compact('kelas'));
     }
 
     /**
@@ -35,7 +36,15 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'nama_kelas' => 'required',
+        ]);
+
+        $kelas = new Kelas();
+        $kelas->nama_kelas = $request->nama_kelas;
+        $kelas->save();
+        return redirect()->route('admin.manajemen.kelas.index')
+            ->with('success', 'Data berhasil dibuat!');
     }
 
     /**
@@ -55,9 +64,10 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kelas $kelas)
+    public function edit(Request $request, $id)
     {
-        //
+        $kelas = Kelas::findOrFail($id);
+        return view('admin.manajemen.kelas.edit', compact('kelas'));
     }
 
     /**
@@ -67,9 +77,18 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kelas $kelas)
+    public function update(Request $request, $id)
     {
-        //
+        // Validasi
+        $validated = $request->validate([
+            'nama_kelas' => 'required',
+        ]);
+
+        $kelas = Kelas::findOrFail($id);
+        $kelas->nama_kelas = $request->nama_kelas;
+        $kelas->save();
+        return redirect()->route('admin.manajemen.kelas.index')
+            ->with('success', 'Data berhasil diedit!');
     }
 
     /**
@@ -78,8 +97,11 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kelas $kelas)
+    public function destroy($id)
     {
-        //
+        $kelas = Kelas::findOrFail($id);
+        $kelas->delete();
+        return redirect()->route('admin.manajemen.kelas.index')
+            ->with('success', 'Data berhasil dihapus!');
     }
 }

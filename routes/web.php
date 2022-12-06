@@ -14,6 +14,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RekapitulasiController;
 use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FullCalenderController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,12 +35,17 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-
+// CALENDER
+Route::controller(FullCalenderController::class)->group(function () {
+    Route::get('fullcalender', 'index');
+    Route::post('fullcalenderAjax', 'ajax');
+});
 // // TAHUN AJARAN
 // // Route::resource('/management/periode', PeriodeController::class)->middleware('auth');
 
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/kalender', [DashboardController::class, 'kalender'])->middleware('auth');
 Route::get('/admin/pembayaran', [PembayaranController::class, 'index']);
 Route::resource('/management/periode', PeriodeController::class);
 Route::resource('/management/kelas', KelasController::class);
@@ -53,3 +61,7 @@ Route::resource('/management/profile', ProfileController::class);
 Route::get('/edit-profile', function () {
     return view('admin.profile.edit');
 });
+
+// Route::get('/kelender', function () {
+//     return view('admin.kalender');
+// });

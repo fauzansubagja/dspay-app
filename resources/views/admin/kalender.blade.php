@@ -135,16 +135,16 @@
             </div>
         </div>
     </div>
-    <script src="{{ ('../app/js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ ('../app/js/popper.min.js') }}"></script>
-    <script src="{{ ('../app/js/bootstrap.min.js') }}"></script>
-    <script src="{{ ('../app/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
-    <script src="{{ ('../app/js/moment.min.js') }}"></script>
-    <script src="{{ ('../app/js/bootstrap-datetimepicker.min.js') }}"></script>
-    <script src="{{ ('../app/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ ('../app/plugins/fullcalendar/fullcalendar.min.js') }}"></script>
-    <script src="{{ ('../app/plugins/fullcalendar/jquery.fullcalendar.js') }}"></script>
-    <script src="{{ ('../app/js/script.js') }}"></script>
+    <script src="{{ asset('../app/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('../app/js/popper.min.js') }}"></script>
+    <script src="{{ asset('../app/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('../app/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('../app/js/moment.min.js') }}"></script>
+    <script src="{{ asset('../app/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ asset('../app/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('../app/plugins/fullcalendar/fullcalendar.min.js') }}"></script>
+    <script src="{{ asset('../app/plugins/fullcalendar/jquery.fullcalendar.js') }}"></script>
+    <script src="{{ asset('../app/js/script.js') }}"></script>
 </body>
 
 </html>
