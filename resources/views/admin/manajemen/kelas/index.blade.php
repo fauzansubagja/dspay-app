@@ -53,18 +53,14 @@
                                         <td>{{ $data->nama_kelas}}</td>
                                         <td>{{ $data->id_kelas}}</td>
                                         <td>
-                                            <form action="{{ route('kelas.destroy', $data->id) }}" method="post">
+                                            <a href="/management/kelas/{{ $data->id_kelas }}/edit"
+                                                class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                            <form action="/kelas/{{ $data->id_kelas }}" method="post" class="d-inline">
                                                 @csrf
                                                 @method('delete')
-                                                <a href="{{ route('kelas.edit', $data->id) }}"
-                                                    class="btn btn-warning"><i class="fas fa-edit"></i>
-                                                </a>
-                                                <button type="submit" class="btn btn-sm btn-outline-danger"
-                                                    onclick="return confirm('Apakah Anda Yakin?')">Delete
-                                                </button>
-                                                {{-- <button type="button" class="btn btn-danger"
+                                                <button type="button" class="btn btn-danger"
                                                     onclick="return confirm('Apakah Anda Yakin?')"><i
-                                                        class=" fas fa-trash-alt"></i></button> --}}
+                                                        class="fas fa-trash-alt"></i></button>
                                             </form>
                                         </td>
                                     </tr>

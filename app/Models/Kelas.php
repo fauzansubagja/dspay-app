@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Kelas extends Model
 {
     use HasFactory;
+    // public $fillable = ['nama_kelas'];
     protected $guarded = ['id_kelas'];
 }

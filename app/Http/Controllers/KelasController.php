@@ -12,6 +12,7 @@ class KelasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $kelas = Kelas::all();
@@ -36,15 +37,14 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'nama_kelas' => 'required',
         ]);
 
-        $kelas = new Kelas();
-        $kelas->nama_kelas = $request->nama_kelas;
-        $kelas->save();
-        return redirect()->route('admin.manajemen.kelas.index')
-            ->with('success', 'Data berhasil dibuat!');
+        $input = $request->all();
+        Kelas::create($input);
+
+        return redirect('/management/kelas')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     /**
@@ -64,10 +64,13 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id)
+    public function edit(Kelas $kelas, $id)
     {
-        $kelas = Kelas::findOrFail($id);
-        return view('admin.manajemen.kelas.edit', compact('kelas'));
+        return view('admin.manajemen.kelas.edit', [
+            'kelas' => $kelas
+        ]);
+        // $kelas = Kelas::findOrFail($id);
+        // return view('admin.manajemen.kelas.edit', compact('kelas'));
     }
 
     /**
@@ -77,18 +80,26 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $kelas)
     {
-        // Validasi
-        $validated = $request->validate([
+        $request->validate([
             'nama_kelas' => 'required',
         ]);
 
-        $kelas = Kelas::findOrFail($id);
-        $kelas->nama_kelas = $request->nama_kelas;
-        $kelas->save();
-        return redirect()->route('admin.manajemen.kelas.index')
-            ->with('success', 'Data berhasil diedit!');
+        $input = $request->all();
+        $kelas->update($input);
+
+        return redirect('/management/kelas')->with('success', 'Data Berhasil Di Edit!');
+        // Validasi
+        // $validated = $request->validate([
+        //     'nama_kelas' => 'required',
+        // ]);
+
+        // $kelas = Kelas::findOrFail($id);
+        // $kelas->nama_kelas = $request->nama_kelas;
+        // $kelas->save();
+        // return redirect()->route('admin.manajemen.kelas.index')
+        //     ->with('success', 'Data berhasil diedit!');
     }
 
     /**
@@ -97,11 +108,11 @@ class KelasController extends Controller
      * @param  \App\Models\Kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Kelas $kelas)
     {
-        $kelas = Kelas::findOrFail($id);
-        $kelas->delete();
-        return redirect()->route('admin.manajemen.kelas.index')
-            ->with('success', 'Data berhasil dihapus!');
+        $kelas = Kelas::find($kelas->id_kelas);
+
+        Kelas::where("id_kelas", $kelas->id_kelas)->delete();
+        return redirect('/management/kelas')->with('delete', 'Data Berhasil Di Hapus!');
     }
 }
